@@ -10,8 +10,8 @@
 .vertical {
     border-left: 1px solid black;
     height: 300px;
-    position:absolute;
-    left: 82%;
+    position:relative;
+    left: -0.5rem;
 }
 
 
