@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+    - name: sourcename
+      description: "A schema for incremental demo"
+      database: TK_DB
+      schema: TK_SCHEMA
+      tables:
+        - name: SALES_DATA_TABLE
+
