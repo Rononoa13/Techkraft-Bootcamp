@@ -1,4 +1,9 @@
+{{config(
+    materialized = 'incremental',
+    incremental_strategy = 'insert',
+    unique_key = 'order_date'
 
+)}}
 
 -- Transform the data
 with filtered_data as (
@@ -12,9 +17,10 @@ monthly_report as (
         date_trunc('month', order_date) as month,
         count(distinct order_id) as total_orders,
         count(distinct customer_id) as total_customers,
-        sum(order_amount) as total_sales
+        sum(order_amount) as total_sales,
+        product_name
     from filtered_data
-    group by date_trunc('month', order_date)
+    group by date_trunc('month', order_date), product_name
 )
 
 -- Create the monthly sales report

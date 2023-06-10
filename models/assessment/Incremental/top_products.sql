@@ -1,3 +1,9 @@
+{{config(
+    materialized = 'incremental',
+    incremental_strategy = 'insert',
+    unique_key = 'order_date'
+
+)}}
 -- Transform the data
 with filtered_data as (
     SELECT *
