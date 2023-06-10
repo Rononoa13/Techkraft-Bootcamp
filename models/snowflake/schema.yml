@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+    - name: sourcename
+      description: "A starter schema and CTE demo"
+      database: TK_DB
+      schema: TK_SCHEMA
+      tables:
+        - name: MY_FIRST_DBT_MODEL
+

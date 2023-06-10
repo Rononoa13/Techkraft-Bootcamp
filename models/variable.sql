@@ -1,0 +1,1 @@
+SELECT * FROM EMPLOYEE WHERE emp_name = '{{ var('emp_name') }}'

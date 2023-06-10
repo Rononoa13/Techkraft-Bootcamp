@@ -1,2 +1,2 @@
 # Techkraft-Bootcamp
-Assignments Repo for bootcamp.
+DBT assessment for bootcamp
